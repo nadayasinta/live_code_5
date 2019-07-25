@@ -1,0 +1,30 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+<div class="container-fluid py-5">  
+    <div class="row justify-content-center">
+    {%for barang in list_barang %}
+        <div class="col-3 m-3 border">
+            <div class="row justify-content-center">
+                <img class="img-fluid rounded p-2" src="{{barang.gambar}}" />
+            </div>
+            <div class="row px-2">
+                <h5><b>{{barang.nama}}</b></h5>
+            </div>
+            <div class="row px-2">
+                <h6>Rp. {{barang.harga}} </h6>
+            </div>
+            <div class="row px-2">
+                <h6><a href="{% url 'barang_detail' barang.id %}">Lihat Detail</a></h6>
+            </div>
+        </div>
+    {% endfor %}
+        <div class="col-3 py-5 m-3 border align-self-center">
+            <div class="row justify-content-center">
+                <h6><a href="{% url 'barang_tambah'%}">Tambahkan Barang</a></h6>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

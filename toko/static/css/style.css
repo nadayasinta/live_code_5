@@ -1,0 +1,17 @@
+.header1{
+    background-color:#2EC9C2;
+    
+}
+
+.header2{
+    background-color:#249F97;  
+}
+
+header a{
+    color: white;
+    text-decoration: none;
+}
+
+header a:hover{
+    color: white;
+}
